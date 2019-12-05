@@ -18,7 +18,7 @@ print("测试集标签",test_labels)
 #试着抽样画出mnist的样本
 #测试集
 train_view=train_images[4]
-plt.imshow(train_view,plt.cm.binary)
+plt.imshow(train_view,plt.cm.binary)  #cm的全称为：colormap，即色图，binary即二进制，0代表白色，1代表黑色，由浅到深
 plt.title("The fifth sample in the training set")
 plt.show()
 
