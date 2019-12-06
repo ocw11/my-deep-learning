@@ -44,6 +44,6 @@ test_loss,test_acc=network.evaluate(test_images,test_labels)
 
 #输出测试集的训练效果
 print("训练集误差：",train_loss)
-print("训练集准确率",train_acc)
-print("测试集误差",test_loss)
-print("测试集准确率",test_acc)
+print("训练集准确率:",train_acc)
+print("测试集误差:",test_loss)
+print("测试集准确率:",test_acc)
