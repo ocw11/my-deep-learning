@@ -78,13 +78,13 @@ test_datagen=ImageDataGenerator(rescale=1./255)  #注意：不能增加验证集
 train_generator=train_datagen.flow_from_directory(
         train_dir,               #目标路径
         target_size=(150,150),   #将图片大小调整为150*150
-        batch_size=32,           #批次大小为32
+        batch_size=20,           #批次大小为20
         class_mode='binary')      #类型为二进制标签
             
 validation_generator=train_datagen.flow_from_directory(
         validation_dir,               #目标路径
         target_size=(150,150),   #将图片大小调整为150*150
-        batch_size=32,           #批次大小为32
+        batch_size=20,           #批次大小为20
         class_mode='binary')     #类型为二进制标签
 
 
@@ -135,7 +135,6 @@ plt.show()
 
 print("训练集误差：",train_loss[-1])
 print("训练集准确率：",train_acc[-1])
-
 print("验证集误差：",val_loss[-1])
 print("验证集准确率：",val_acc[-1])
 
