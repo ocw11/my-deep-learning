@@ -1,5 +1,4 @@
 import os
-import numpy as np
 from keras.applications.vgg16 import VGG16
 from keras.preprocessing.image import ImageDataGenerator
 from keras import models
@@ -49,11 +48,12 @@ validation_generator=test_datagen.flow_from_directory(validation_dir,
                                                   class_mode='binary')
 
 
+
 #搭建网络
 network=models.Sequential()
 network.add(conv_base)
 network.add(layers.Flatten())
-network.add(layers.Dense(256,activation='relu'))
+network.add(layers.Dense(512,activation='relu'))
 network.add(layers.Dense(1,activation='sigmoid'))
 
 network.summary()
@@ -102,4 +102,3 @@ print("训练集准确率：",acc[-1])
 
 print("验证集误差：",val_loss[-1])
 print("验证集准确率：",val_acc[-1])
-
